@@ -9,7 +9,7 @@ const optsSimplBox = {
 };
 const lightbox = new SimpleLightbox('.gallery a', optsSimplBox);
 
-let pg = 1;
+let pg ;
 
 const refs = {
   forma: document.querySelector('.search-form'),
