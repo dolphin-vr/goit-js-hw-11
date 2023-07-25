@@ -3,6 +3,12 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const API_KEY = '38368366-a7227dffd937457d386778604';
 
+const optNotiflx = {
+  width: '380px',
+  timeout: 4000,
+  fontSize: '18px',
+};
+
 const optsSimplBox = {
   captionsData: 'alt',
   captionDelay: 250,
@@ -17,4 +23,4 @@ const refs = {
   btnMore: document.querySelector('.more'),
 };
 
-export { API_KEY, optsSimplBox, lightbox, pg, refs };
+export { API_KEY, optNotiflx, optsSimplBox, lightbox, pg, refs };

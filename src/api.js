@@ -1,22 +1,14 @@
 import axios from 'axios';
-import { refs, API_KEY } from './vars.js';
+import { configAx } from './index';
 
-async function serviceGetImages(query, pg = 1) {
-  const config = {
-    method: 'get',
-    baseURL: 'https://pixabay.com',
-    params: {
-      key: API_KEY,
-      q: query,
-      image_type: 'photo',
-      orientation: 'horizontal',
-      safesearch: true,
-      page: pg,
-    },
-  };
+async function serviceGetImages(query, pg=1) {
+  configAx.params.q = query;
+  configAx.params.page = pg;
   try {
-    const { data } = await axios('/api', config);
-    if (data.totalHits > 20) refs.btnMore.style.display = 'block';
+    const { data } = await axios('/api', configAx);
+    console.log('page = ', pg);
+    // console.log('conf = ', configAx);
+    console.log('conf pp = ', configAx.params.page);
     return data;
   } catch (error) {
     console.log(error.message);
