@@ -1,7 +1,7 @@
-import { refs, page, lightbox } from './vars';
+import { refs, page, lightbox } from './vars.js';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
-import { serviceGetImages } from './api';
-import { createMarkup } from './markup';
+import { serviceGetImages } from './api.js';
+import { createMarkup } from './markup.js';
 
 async function goSearch(ev) {
   ev.preventDefault();
