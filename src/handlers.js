@@ -11,7 +11,7 @@ async function goSearch(ev) {
     timeout: 4000,
     fontSize: '18px',
   };
-  pg = 1;
+  // pg = 1;
   const searchString = refs.forma.searchQuery.value.split(' ').join('+');
   const images = await serviceGetImages(searchString);
   if (images.total == 0)
