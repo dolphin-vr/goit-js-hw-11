@@ -9,7 +9,7 @@ const optsSimplBox = {
 };
 const lightbox = new SimpleLightbox('.gallery a', optsSimplBox);
 
-let page = 1;
+let pg = 1;
 
 const refs = {
   forma: document.querySelector('.search-form'),
@@ -17,4 +17,4 @@ const refs = {
   btnMore: document.querySelector('.more'),
 };
 
-export { API_KEY, optsSimplBox, lightbox, page, refs };
+export { API_KEY, optsSimplBox, lightbox, pg, refs };

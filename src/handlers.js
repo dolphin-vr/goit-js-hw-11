@@ -1,4 +1,4 @@
-import { refs, page, lightbox } from './vars.js';
+import { refs, pg, lightbox } from './vars.js';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { serviceGetImages } from './api.js';
 import { createMarkup } from './markup.js';
@@ -11,7 +11,7 @@ async function goSearch(ev) {
     timeout: 4000,
     fontSize: '18px',
   };
-  page = 1;
+  pg = 1;
   const searchString = refs.forma.searchQuery.value.split(' ').join('+');
   const images = await serviceGetImages(searchString);
   if (images.total == 0)
@@ -22,11 +22,11 @@ async function goSearch(ev) {
 
 async function goMore() {
   const searchString = refs.forma.searchQuery.value.split(' ').join('+');
-  page += 1;
-  const images = await serviceGetImages(searchString, page);
+  pe += 1;
+  const images = await serviceGetImages(searchString, pg);
   refs.gallery.insertAdjacentHTML('beforeend', await createMarkup(images.hits));
   lightbox.refresh();
-  if (page >= 26) refs.btnMore.style.display = 'none';
+  if (pg >= 26) refs.btnMore.style.display = 'none';
 }
 
 export { goSearch, goMore };
