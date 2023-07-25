@@ -7,7 +7,7 @@ import { createMarkup } from './markup';
 const API_KEY = '38368366-a7227dffd937457d386778604';
 const configAx = {
    method: 'get',
-   baseURL: 'https://pixabay.com',
+   baseURL: 'https://pixabay.com/api/',
    params: {
      key: API_KEY,
      image_type: 'photo',
