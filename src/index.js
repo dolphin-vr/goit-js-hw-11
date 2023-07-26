@@ -43,6 +43,7 @@ refs.btnMore.addEventListener('click', goMore);
 
 async function goSearch(ev) {
   ev.preventDefault();
+  refs.btnMore.style.display = 'none';
   window.scrollTo(0, 0);
   page = 1;
   const searchString = refs.form.searchQuery.value.split(' ').join('+');
